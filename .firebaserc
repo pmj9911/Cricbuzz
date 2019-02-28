@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "cricDemo": "cricbuzz-demo",
+    "default": "cricbuzz-demo",
+    "cricbuzz": "cricbuzz-demo",
+    "cricapp": "cricbuzz-demo"
+  }
+}

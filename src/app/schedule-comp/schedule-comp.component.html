@@ -1,0 +1,16 @@
+<div class="container">
+  <table>
+    <tr> 
+   <th>date </th> 
+   <th>name </th> 
+
+  </tr>
+  <tr *ngFor="let datas of apiData.data; index as i">
+      
+   <td>{{datas.name}}</td>
+   <td>{{datas.date}}</td>
+  
+      
+  </tr>
+   </table> 
+  </div>

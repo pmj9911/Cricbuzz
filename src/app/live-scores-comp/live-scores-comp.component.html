@@ -1,0 +1,42 @@
+<div class="container">
+        <app-card-score-comp></app-card-score-comp>
+        <br>
+        <br>
+  <div class="row card-group">
+      <div class="col-4"  *ngFor="let datas of apiData.matches;">
+          <div class="card  border-dark bg-success " style="width:250.5px; height:150px">
+                
+            <div class="row">
+              <div class="col-lg-5">
+                  <p class="card-text" style="display:inline-block; width:140px ;padding-left:10px ; font-size: 15px;">{{datas['team-1']}} VS {{datas['team-2']}}<br>&nbsp;&nbsp;Date:</p>
+              </div>
+              <div class="col-lg-3">
+                  <p class="card-text" style="display:inline-block; width:140px ;padding-left:10px ;  font-size: 15px;">type: {{datas.type}} &nbsp;{{datas.date | date:'d/M/y'}} </p>
+              </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-5 " >
+                  <p class="card-text" style="display:inline-block; width:140px ;padding-left:10px ; font-size: 15px;">toss won by </p>
+                </div>
+                <div class="col-lg-3 ">
+                    <p class="card-text" style="display:inline-block; width:140px ;padding-left:10px ;  font-size: 15px;"> {{datas.toss_winner_team}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-11">
+                    <p> 
+                         winning team is   {{datas.winner_team}}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-11">
+                    <p> 
+                         match started: {{datas.matchStarted}}
+                    </p>
+                </div>
+            </div>
+          </div>
+      </div>
+  </div>
+</div>

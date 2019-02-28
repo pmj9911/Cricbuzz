@@ -1,0 +1,42 @@
+<header id="top" style="padding-top:50px;">
+<div class="container">
+  <nav class="navbar navbar-expand-sm bg-success navbar-dark">
+      <div class="row">
+        <div class="col-lg-0.5">
+      <a class="navbar-brand"  routerLink="Home" routerLinkActive="active">
+          <img src="{{logo_link}}" alt="logo" style="width:100px;">
+      </a>  
+    </div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar"></div>
+      <ul class="navbar-nav">
+          <div class="col-lg-1.5" *ngFor="let headerName of headerNames; index as i">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/{{headerName}}" routerLinkActive="active">{{headerName}}</a>
+            </li>
+          </div>
+      </ul>
+      <form class="form-inline">
+          <div class="input-group">
+              <div class="inner-addon left-addon">
+                  <span class="glyphicon glyphicon-search"></span>
+              </div>
+            <input type="text" class="form-control " placeholder="Search">
+          </div>    
+        </form>
+    </div>
+    </nav>
+    <div class="navbar navbar-expand-sm bg-light text-info">
+        <ul class="navbar-nav">
+            <div class="col-lg-1.5" *ngFor="let secondHeader of secondHeaders">
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/{{secondHeader}}" routerLinkActive="active">{{secondHeader}}</a>
+              </li>            
+            </div>         
+        </ul>
+    </div>
+  </div>
+    <router-outlet></router-outlet>
+    <app-footer-comp></app-footer-comp>

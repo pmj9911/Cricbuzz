@@ -1,0 +1,20 @@
+
+<div class="container"  > 
+  <div class="jumbotron  bg-info " style=" height:auto">
+          
+  <div class="row">
+
+     <div class="col-lg-4 " *ngFor="let datas of videosData;index as i">
+        <h5 style="text-align: center ;  font-size:medium">{{datas.desc}}</h5>
+        <div class="embed-responsive embed-responsive-16by9">
+           <iframe width="560" height="315" [src]="datas.link | safe" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+           </iframe>
+           
+        </div>
+        <br>
+        <br>               
+     </div> 
+
+    </div>
+  </div>   
+</div>
